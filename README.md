@@ -1,12 +1,12 @@
 # Introduction
 
 In this lab we'll explore different approaches to automation in Azure through
-deploying an application consisting of a MVC frontend and an API backend to
+deploying an application consisting of a MVC frontend and an Web API backend to
 an environment running on Azure.
 
 There are a few ways of approaching automation:
 
-  - Sending commands using a CLI client, e.g. using [Powershell][5] or [the
+  - Sending commands via a CLI client, e.g. using [Powershell][5] or [the
       cross-platform version][6] equivalent running on Node.js
   - Describe your environment using [Azure resource manager templates][7] (ARM
       templates) and provisioning it using the CLI client
@@ -23,7 +23,7 @@ Hopefully, we have enough attendants to cover all approaches above!
       - [Azure Powershell][10]
       - (Optional) Visual Studio 2015 offers (in)complete tooling for writing
 	  ARM templates that may be of help
-  - Setup Powershell by running in a Azure Powershell window:
+  - Once installed, setup Powershell by running in a Azure Powershell window:
       - `Add-AzureAccount` and login if necessary
       - `Select-AzureSubscription ".NET Backend Lab"`
       - `Switch-AzureMode AzureResourceManager`
@@ -38,33 +38,35 @@ Hopefully, we have enough attendants to cover all approaches above!
 ## The application
 
   - Application configuration is fetched from environment variables.
-      `LocalDevelopment.cs` lists the required variables.
+      `LocalConfiguration.cs` in either project lists its respective required
+      variables.
   - Application state is stored in Azure Table Storage.
 
 ## CLI
 
   - Powershell cmdlets follows the patter `<VERB>-Azure<NOUN>` where `<VERB>`
-      is frequently `New`, `Get`, or `Remove` for creating, retrieving, and
-      deleting Azure resources respectively, e.g. `New-AzureVM` will create a
-      new VM, and `NOUN` is the name of the service, e.g. `Get-AzureWebApp`
-      will return an object representing an Azure Web App.
-  - `Get-Help <cmdlet>` for help for a given cmdlet. Note that documentation is
-      sparse at the time of writing (2015-08-16).
+      is frequently `New`, `Get`, or `Remove` and used for creating,
+      retrieving, and deleting Azure resources respectively, e.g. `New-AzureVM`
+      will create a new VM. The `NOUN` is the name of the service, e.g.
+      `Get-AzureWebApp` will return an object representing an Azure Web App.
+  - `Get-Help <cmdlet>` shows documentation for a given cmdlet. Note that
+      documentation is sparse at the time of writing (2015-08-16).
   - `Get-Help <cmdlet> -Examples` will display example usages if available
   - A full list of commands is available through `Get-Help *-azure*`
-  - Auto-completion is available for cmdlets as well as parameters using the `Tab`
-  - Note that `Switch-AzureMode` will soon be [depreciated][3] and resource
+  - Auto-completion is available for cmdlets as well as parameters by hitting
+      the `Tab`-key
+  - Note that `Switch-AzureMode` will soon be [deprecated][3] and resource
       manager cmdlets will receive a `RM` prefix, e.g. `New-AzureVM` will
       become `New-AzureRMVM`.
 
 ## ARM templates
 
-  - Read about [the template "language"][7] and [how to deploy the
+  - Read up about [the template "language"][7] and [how to deploy the
       templates][11]
   - There are sample templates [here][12] or [directly via GitHub][1]
   - Documentation for resource properties are severely lacking at the time of
-      writing. The [template schemas][2] may be used as a documentation,
-      especially the ["root" schemas][13].
+      writing. The [template schemas][2] may be used as a source of
+      documentation, especially the ["root" schemas][13].
 
 ## MAML
 
