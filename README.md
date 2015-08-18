@@ -52,7 +52,8 @@ Hopefully, we have enough attendants to cover all approaches above!
   - `Get-Help <cmdlet>` shows documentation for a given cmdlet. Note that
       documentation is sparse at the time of writing (2015-08-16).
   - `Get-Help <cmdlet> -Examples` will display example usages if available
-  - A full list of commands is available through `Get-Help *-azure*`
+  - A full list of commands is available through `Get-Help *-azure*`,
+      alternatively [from MSDN][14].
   - Auto-completion is available for cmdlets as well as parameters by hitting
       the `Tab`-key
   - Note that `Switch-AzureMode` will soon be [deprecated][3] and resource
@@ -87,3 +88,5 @@ Hopefully, we have enough attendants to cover all approaches above!
 [11]: https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-deploy/
 [12]: http://azure.microsoft.com/en-us/documentation/templates/
 [13]: https://github.com/Azure/azure-resource-manager-schemas/tree/master/schemas/2015-01-01
+[14]: https://msdn.microsoft.com/en-us/library/azure/mt125356.aspx
+
