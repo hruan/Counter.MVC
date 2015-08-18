@@ -75,6 +75,11 @@ Hopefully, we have enough attendants to cover all approaches above!
       up-to-date API.
   - IntelliSense is your friend :)
 
+## IaaS
+
+  - If you're going down the IaaS route, [Desired State Configuration][15] may
+      be preferred over [Custom Scripts][16].
+
 [1]: https://github.com/Azure/azure-quickstart-templates
 [2]: https://github.com/Azure/azure-resource-manager-schemas
 [3]: https://github.com/Azure/azure-powershell/wiki/Deprecation-of-Switch-AzureMode-in-Azure-PowerShell
@@ -89,4 +94,5 @@ Hopefully, we have enough attendants to cover all approaches above!
 [12]: http://azure.microsoft.com/en-us/documentation/templates/
 [13]: https://github.com/Azure/azure-resource-manager-schemas/tree/master/schemas/2015-01-01
 [14]: https://msdn.microsoft.com/en-us/library/azure/mt125356.aspx
-
+[15]: http://blogs.msdn.com/b/powershell/archive/2014/08/07/introducing-the-azure-powershell-dsc-desired-state-configuration-extension.aspx
+[16]: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-extensions-customscript/
